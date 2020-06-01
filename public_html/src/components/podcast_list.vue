@@ -1,5 +1,7 @@
 <template>
-  <b-table :data="tdata" :columns="columns"></b-table>
+  <section class="section box">
+    <b-table :data="tdata" :columns="columns" @click="testAlert"></b-table>
+  </section>
 </template>
 
 <script>
@@ -10,9 +12,9 @@ export default {
       columns: [
         {
           field: 'id',
-          label: 'ID',
-          width: '50',
-          numeric: true
+          label: 'Episode',
+          numeric: true,
+          centered: true
         },
         {
           field:'title',
@@ -38,13 +40,17 @@ export default {
       .then(data => {
         for (let i = 0; i < data.items.length; i++){
           vm.tdata.push({
-            'id': i + 1,
+            'id':  data.items.length - i,
             'title': data.items[i].title,
-            'date': data.items[i].pubDate
+            'date': data.items[i].pubDate,
+            'link': data.items[i].enclosure.link
           });
         }
       });
-    }
+    },
+  testAlert: function(e){
+    window.location.replace(e.link);
+  }
   }
 }
 </script>
