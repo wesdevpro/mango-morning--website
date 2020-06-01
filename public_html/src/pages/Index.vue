@@ -1,18 +1,18 @@
 <template>
   <Layout>
-    <podList></podList>
+    <podCarousel></podCarousel>
   </Layout>
 </template>
 
 <script>
-import podList from '~/components/podcast_list.vue'
+import podCarousel from '~/components/podcast_carousel.vue'
 
 export default {
   metaInfo: {
     title: 'Home'
   },
   components:{
-    podList
+    podCarousel
   }
 }
 </script>

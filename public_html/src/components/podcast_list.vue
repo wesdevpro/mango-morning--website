@@ -1,6 +1,10 @@
 <template>
   <section class="section box">
-    <b-table :data="tdata" :columns="columns" @click="testAlert"></b-table>
+    <b-table class="is-mobile" :data="tdata" ref="table" :columns="columns" @click="rowClicked">
+      <template slot="detail">
+        this is a teast
+      </template>
+    </b-table>
   </section>
 </template>
 
@@ -48,9 +52,9 @@ export default {
         }
       });
     },
-  testAlert: function(e){
-    window.location.replace(e.link);
-  }
+    rowClicked: function(e){
+      window.location.href = '';
+    }
   }
 }
 </script>
