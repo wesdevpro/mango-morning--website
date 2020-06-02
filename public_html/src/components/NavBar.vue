@@ -28,8 +28,8 @@
               </a>
             </div>
           </div>
-          <a class="navbar-item" style="color: 	rgb(186,85,211);" href="https://anchor.fm/mangomorning">
-             Anchor
+          <a class="navbar-item" style="color: rgb(186,85,211);" href="/me">
+             About Me
           </a>
         </div>
       </div>
