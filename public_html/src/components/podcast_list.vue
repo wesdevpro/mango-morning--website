@@ -5,7 +5,7 @@
       <source id='audioSource' :src='tdata[0].link' :type="tdata[0].type">
       Your browser does not support the audio format.
     </audio>
-    <b-table class="is-mobile" :data="tdata" ref="table" :columns="columns" @click="rowClicked">
+    <b-table class="is-mobile" :data="tdata" ref="table" :columns="columns" @click="rowClicked()">
     </b-table>
   </section>
 </template>
