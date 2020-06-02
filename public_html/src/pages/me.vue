@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section>
+    <section class="section has-text-centered">
       <h2>This Is suppossed to be about me</h2>
     </section>
   </Layout>

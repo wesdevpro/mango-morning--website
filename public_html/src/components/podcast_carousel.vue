@@ -7,7 +7,7 @@
           <div class="has-text-centered">
             <p>{{data.description}}</p>
           </div>
-          <b-button type="is-primary" style="margin-top:10px;">Listen Now</b-button>
+          <b-button type="is-primary" style="margin-top:10px;" @click="listenClick(data.link)">Listen Now</b-button>
         </div>
       </section>
     </b-carousel-item>
@@ -40,8 +40,10 @@ export default {
             'color': colors[i]
           });
         }
-        console.log(vm.carouselData)
       });
+    },
+    listenClick(link){
+      window.location.href = link;
     }
   }
 }

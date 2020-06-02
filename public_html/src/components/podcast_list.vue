@@ -1,10 +1,11 @@
 <template>
-  <section class="section">
-    <h2 class='title has-text-centered'>My Recordings</h2><br>
+  <section class="section has-text-centered">
+    <h2 class='title'>My Recordings</h2><br>
+    <audio id='audio' controls autoplay>
+      <source id='audioSource' :src='tdata[0].link' :type="tdata[0].type">
+      Your browser does not support the audio format.
+    </audio>
     <b-table class="is-mobile" :data="tdata" ref="table" :columns="columns" @click="rowClicked">
-      <template slot="detail">
-        this is a test
-      </template>
     </b-table>
   </section>
 </template>
@@ -48,13 +49,16 @@ export default {
             'id':  data.items.length - i,
             'title': data.items[i].title,
             'date': data.items[i].pubDate,
-            'link': data.items[i].enclosure.link
+            'link': data.items[i].enclosure.link,
+            'type': data.items[i].enclosure.type
           });
         }
       });
     },
     rowClicked: function(e){
-      window.location.href = (e.link);
+      document.getElementById('audioSource').src = e.link;
+      document.getElementById('audioSource').type = e.type;
+      document.getElementById('audio').load().play();
     }
   }
 }
