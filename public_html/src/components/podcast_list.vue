@@ -2,7 +2,9 @@
   <section class="section has-text-centered">
     <h2 class='title'>My Recordings</h2><br>
     <audio id='audio' controls autoplay>
-      <source id='audioSource' :src='tdata[0].link' :type="tdata[0].type">
+      <keep-alive>
+        <source id='audioSource' :src='tdata[0].link' :type="tdata[0].type">
+      </keep-alive>
       Your browser does not support the audio format.
     </audio>
     <b-table :data="tdata" ref="table" :columns="columns" @click="rowClicked">
@@ -34,7 +36,7 @@ export default {
       ]
     }
   },
-  mounted(){
+  created(){
     this.fetchData();
   },
   methods:{
