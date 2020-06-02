@@ -2,6 +2,7 @@
   <div>
     <navbar></navbar>
     <slot/>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -14,10 +15,12 @@ query {
 </static-query>
 <script>
 import navbar from '~/components/NavBar.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   components:{
-    navbar
+    navbar,
+    Footer
   }
 }
 </script>

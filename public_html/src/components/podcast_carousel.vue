@@ -1,10 +1,12 @@
 <template>
-  <b-carousel :indicator-inside="false" pause-hover="true">
+  <b-carousel class="has-background-black" :indicator-inside="false" :pause-hover="true" :arrow="false">
     <b-carousel-item v-for="(data, i) in carouselData" :key="i">
-      <section :class="`hero is-medium is-green is-bold`">
-        <div class="hero-body has-text-centered" style="max-height: 300px;">
+      <section :class="`hero is-medium is-bold is-${data.color}`">
+        <div class="hero-body has-text-centered">
           <h1 class="title">{{data.title}}</h1>
-          <p>{{data.description}}</p>
+          <div class="has-text-centered">
+            <p>{{data.description}}</p>
+          </div>
           <b-button type="is-primary" style="margin-top:10px;">Listen Now</b-button>
         </div>
       </section>
@@ -25,6 +27,7 @@ export default {
   methods: {
     async fetchData(){
       let vm = this;
+      let colors = ['dark', 'success', 'dark', 'info']
 
       fetch('https://api.rss2json.com/v1/api.json?rss_url=https://anchor.fm/s/18c4d00c/podcast/rss')
       .then(response => response.json())
@@ -33,7 +36,8 @@ export default {
           vm.carouselData.push({
             'title': data.items[i].title,
             'description': data.items[i].description,
-            'link': data.items[i].link
+            'link': data.items[i].link,
+            'color': colors[i]
           });
         }
         console.log(vm.carouselData)

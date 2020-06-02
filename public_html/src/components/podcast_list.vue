@@ -1,8 +1,9 @@
 <template>
-  <section class="section box">
+  <section class="section">
+    <h2 class='title has-text-centered'>My Recordings</h2><br>
     <b-table class="is-mobile" :data="tdata" ref="table" :columns="columns" @click="rowClicked">
       <template slot="detail">
-        this is a teast
+        this is a test
       </template>
     </b-table>
   </section>
@@ -53,7 +54,7 @@ export default {
       });
     },
     rowClicked: function(e){
-      window.location.href = '';
+      window.location.href = (e.link);
     }
   }
 }

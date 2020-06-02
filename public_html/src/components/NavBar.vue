@@ -2,7 +2,7 @@
   <nav role='navigation' class='navbar is-white' aria-label="main navigation">
       <div class='navbar-brand' style="margin-left: 20px;">
           <a class='navbar-item'>
-            <h2 class="title" style="font-family: Karla, cursive; color: rgb(186,85,211);">Mango Morning</h2>
+            <h2 class="title" style="font-family: Karla, Monospace; color: rgb(186,85,211);">Mango Morning</h2>
           </a>
           <a v-on:click="isActiveNavbar" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
