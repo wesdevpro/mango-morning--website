@@ -58,7 +58,8 @@ export default {
     rowClicked: function(e){
       document.getElementById('audioSource').src = e.link;
       document.getElementById('audioSource').type = e.type;
-      document.getElementById('audio').load().play();
+      document.getElementById('audio').load();
+      document.getElementById('audio').play();
     }
   }
 }
