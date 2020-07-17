@@ -39,8 +39,14 @@ export default {
   },
   methods: {
     submitForm(){
-      console.log(this.formName, this.formEmail, this.formSubject, this.formBody);
-    }
+      var collectedJson = { "name": this.formName, "subject": this.formSubject, "email": this.formEmail, "body": this.formBody }
+
+       fetch("https://mango-email.wesleyfunctions.workers.dev", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: document.querySelector("#text").value })
+      })
+    } 
   },
 }
 </script>
