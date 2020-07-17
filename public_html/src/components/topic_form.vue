@@ -44,7 +44,7 @@ export default {
        fetch("https://mango-email.wesleyfunctions.workers.dev", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: document.querySelector("#text").value })
+        body: collectedJson
       })
     } 
   },
