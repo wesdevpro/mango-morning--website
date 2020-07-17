@@ -43,10 +43,9 @@ export default {
 
        fetch("https://mango-email.wesleyfunctions.workers.dev", {
         method: 'POST',
-        mode: 'cors',
-        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'https://mango-email.wesleyfunctions.workers.dev' },
-        body: collectedJson
-      })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(collectedJson)
+      }).catch(error => console.log(error))
     } 
   },
 }
