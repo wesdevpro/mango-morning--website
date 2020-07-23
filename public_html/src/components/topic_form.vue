@@ -47,7 +47,7 @@ export default {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin' : '*'
         },
-        body: JSON.stringify(collectedJson)
+        body: collectedJson
       }).catch(error => console.log(error))
     } 
   },
