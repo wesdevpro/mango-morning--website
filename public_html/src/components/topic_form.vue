@@ -43,7 +43,10 @@ export default {
 
        fetch("https://mango-email.wesleyfunctions.workers.dev", {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin' : '*'
+        },
         body: JSON.stringify(collectedJson)
       }).catch(error => console.log(error))
     } 
