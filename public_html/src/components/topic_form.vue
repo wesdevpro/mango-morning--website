@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     submitForm(){
-      var collectedJson = { "name": this.formName, "subject": this.formSubject, "email": this.formEmail, "body": this.formBody }
+      var collectedJson = { 'name': this.formName, 'subject': this.formSubject, 'email': this.formEmail, 'body': this.formBody }
 
        fetch("https://mango-email.wesleyfunctions.workers.dev", {
         method: 'POST',
@@ -47,7 +47,7 @@ export default {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin' : '*'
         },
-        body: collectedJson
+        body : JSON.stringify(collectedJson),
       }).catch(error => console.log(error))
     } 
   },
