@@ -8,6 +8,7 @@
     <b-field label="Email">
       <b-input type="email"
         placeholder="youremail@example.com"
+        minlength="5"
         maxlength="30"
         v-model="formEmail">
       </b-input>
