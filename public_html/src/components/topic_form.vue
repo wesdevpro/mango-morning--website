@@ -44,6 +44,8 @@ export default {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          "Access-Control-Allow-Methods": "POST",
           'Access-Control-Allow-Origin' : '*'
         },
         body : JSON.stringify({ 'name': this.formName, 'subject': this.formSubject, 'email': this.formEmail, 'body': this.formBody }),
