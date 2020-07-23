@@ -40,7 +40,7 @@ export default {
   methods: {
     submitForm(){
       var collectedJson = { 'name': this.formName, 'subject': this.formSubject, 'email': this.formEmail, 'body': this.formBody }
-
+      console.log(collectedJson);
        fetch("https://mango-email.wesleyfunctions.workers.dev", {
         method: 'POST',
         headers: { 
