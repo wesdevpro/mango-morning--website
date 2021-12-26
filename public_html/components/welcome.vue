@@ -2,6 +2,7 @@
   <div>
     <div
       class="has-text-center flex-align-items-center red purple spacer layer2"
+      style="min-height: 400px"
     >
       <h2 class="title is-2 auto-margin">Good Mango Morning!</h2>
     </div>
