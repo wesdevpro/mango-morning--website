@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+   --primary-color: rgb(255, 156, 65);
+   --secondary-color: hsl(32, 95%, 78%);
+   --navbar-color: rgb(255, 255, 255);
+   --navbar-text: rgb(024, 019, 004);
+   --transition-color: #7124d6;
+   --link-color: #828282;
+}
+
+body, html {
+   background-color: var(--secondary-color);
+   height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, text {
+   color: var(--primary-color) !important;
+   fill: var(--primary-color) !important;
+   font-family: 'Roboto', sans-serif !important;
+}
+
+
+.navbar {
+   background-color: var(--navbar-color) !important;
+}
+
+.navbar-item {
+   color: var(--navbar-text) !important;
+}
+
+.auto-margin {
+   margin: auto;
+}
+
+/*    NavBar Styles    */
+.navbar-brand h1 {
+   margin-left: 20px;
+   margin-top: 10px;
+}
+
+.navbar-start {
+   margin-left: 2em;
+}
+
+.navbar-start a {
+   font-size: x-large !important;
+   font-weight: normal !important;
+}
+
+.navbar-start a:hover {
+   font-size: large !important;
+   font-weight: normal !important;
+   color: var(--transition-color) !important;
+}
+
+
+@media only screen and (max-width: 769px) {
+   .navbar-brand h1 {
+      margin: auto;
+   }
+}
