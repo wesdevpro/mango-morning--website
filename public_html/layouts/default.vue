@@ -29,16 +29,8 @@ export default {
   background-image: url('~@/assets/transition.svg');
 }
 
-.layer1 {
-  background-image: url('~@/assets/blob-scene-haikei.svg');
-}
-
 .layer2 {
   background-image: url('~@/assets/crystal-background.svg');
-}
-
-.transition1 {
-  background-image: url('~@/assets/transition.svg');
 }
 
 .flip {

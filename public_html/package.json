@@ -1,36 +1,39 @@
 {
-  "name": "mango_morning_podcast_website",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "dev-local": "nuxt --hostname 0.0.0.0 --port 8080",
+   "name": "mango_morning_podcast_website",
+   "version": "1.0.0",
+   "private": true,
+   "scripts": {
+      "dev": "nuxt",
+      "dev-local": "nuxt --hostname 0.0.0.0 --port 8080",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
-  },
-  "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/fontawesome": "^1.1.2",
-    "@nuxtjs/style-resources": "^1.2.1",
-    "bulma-css-vars": "^0.7.0",
-    "core-js": "^3.8.3",
-    "kute.js": "^2.2.0",
-    "nuxt": "^2.14.12",
-    "nuxt-buefy": "^0.4.4"
-  },
-  "devDependencies": {
-    "@nuxtjs/eslint-config": "^5.0.0",
-    "@nuxtjs/eslint-module": "^3.0.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.18.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.5.0",
-    "prettier": "^2.2.1"
-  }
+      "start": "nuxt start",
+      "generate": "nuxt generate",
+      "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+      "lint": "yarn lint:js"
+   },
+   "engines": {
+      "node": "v16.13.1"
+   },
+   "dependencies": {
+      "@fortawesome/free-solid-svg-icons": "^5.15.4",
+      "@nuxtjs/axios": "^5.13.6",
+      "@nuxtjs/fontawesome": "^1.1.2",
+      "@nuxtjs/style-resources": "^1.2.1",
+      "bulma-css-vars": "^0.7.0",
+      "core-js": "^3.8.3",
+      "kute.js": "^2.2.0",
+      "nuxt": "^2.14.12",
+      "nuxt-buefy": "^0.4.4"
+   },
+   "devDependencies": {
+      "@nuxtjs/eslint-config": "^5.0.0",
+      "@nuxtjs/eslint-module": "^3.0.2",
+      "babel-eslint": "^10.1.0",
+      "eslint": "^7.18.0",
+      "eslint-config-prettier": "^7.2.0",
+      "eslint-plugin-nuxt": "^2.0.0",
+      "eslint-plugin-prettier": "^3.3.1",
+      "eslint-plugin-vue": "^7.5.0",
+      "prettier": "^2.2.1"
+   }
 }
