@@ -41,7 +41,6 @@ body {
   background-position: center;
   background-size: cover;
   height: 100%;
-  z-index: -1;
 }
 
 .trasition-container {
